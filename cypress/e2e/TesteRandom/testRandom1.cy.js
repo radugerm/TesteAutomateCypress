@@ -1,47 +1,48 @@
-//  Test verifica segment din URL
-describe('Exemplu unde', () => {
+//Test verifica segment din URL
 
-    //it('I can verify segment', () => {
-    //    cy.visit("https://www.digi24.ro/stiri/externe/ue");
-    //    cy.url().should("include", '/stiri/')
+describe('Example where', () => {
 
-    //})
+    it('I can verify segment', () => {
+        cy.visit("https://www.digi24.ro/stiri/externe/ue");
+        cy.url().should("include", '/stiri/')
 
-    //it('asteapta 10 secunde', () => {
-    //    cy.visit("https://google.com");
-    //    cy.get('#L2AGLb').click();
+    })
 
-    //   cy.wait(10000);
-    //    cy.get(".gLFyf").type("Au trecut 10 secunde");
-    //})
+    it('wait 10 secunds', () => {
+        cy.visit("https://google.com");
+        cy.get('#L2AGLb').click();
 
-    //it('selectez folosind un atribut', () => {
-    //    cy.visit("https://google.com");
-    //    cy.get('#L2AGLb').click();
-    //    cy.get('.gLFyf').click();
-    //    cy.get('[alt="Google"]').should('be.visible');
-    //})
+        cy.wait(10000);
+        cy.get(".gLFyf").type("Has past 10 seconds");
+    })
 
-    //it("Fac un screenshot la pagina", () => {
-    //   cy.visit("https://www.google.com");
-    //    cy.screenshot();
-    //})
+    it('Selecting using a atribut', () => {
+        cy.visit("https://google.com");
+        cy.get('#L2AGLb').click();
+        cy.get('.gLFyf').click();
+        cy.get('[alt="Google"]').should('be.visible');
+    })
 
-    //it('verific o valoare din input', () => {
-    //    cy.visit('https://google.com');
+    it("Make a Screenshot", () => {
+        cy.visit("https://www.google.com");
+        cy.screenshot();
+    })
 
-    //    cy.get('#L2AGLb').click();
+    it('Verify a value at input', () => {
+        cy.visit('https://google.com');
 
-    //    const googleSearch = cy.get('.gLFyf');
+        cy.get('#L2AGLb').click();
 
-
-    //    googleSearch.type('123');
-    //    googleSearch.should('have.value', '123');
+        const googleSearch = cy.get('.gLFyf');
 
 
-    //})
+        googleSearch.type('123');
+        googleSearch.should('have.value', '123');
 
-    it("Verific clasa de la buton", () => {
+
+    })
+
+    it("Verify clas from button", () => {
         cy.visit('https://libris.ro');
         cy.get("#autoCompleteButton").should("have.class", 'onSearchClick');
 
