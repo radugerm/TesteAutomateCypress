@@ -19,9 +19,13 @@ describe("Tests with Rahul", () => {
 
             }
 
+            cy.get('.brand').then(function (logoelement) {
+                cy.log(logoelement.text())
+            })
 
         })
 
     })
 
-}) 
+})
+
