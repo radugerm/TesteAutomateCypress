@@ -9,11 +9,11 @@ describe('My Second Test Suite', function () {
         cy.get('tr td:nth-child(2)').each(($e1, index, $list) => {
 
             const text = $e1.text()
-            if (text.includes('Python')) {
+            if (text.includes('WebServices')) {
 
                 cy.get('tr td:nth-child(2)').eq(index).next().then(function (price) {
                     const priceText = price.text()
-                    expect(priceText).to.equal("25")
+                    expect(priceText).to.equal("35")
                 })
 
 
